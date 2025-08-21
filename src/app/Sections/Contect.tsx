@@ -56,7 +56,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
 
         <form onSubmit={HandleSubmit} className=" bg-gray-950 p-10 sm:p-10 md:p-12 ring-1 ring-white rounded-2xl max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto space-y-6 flex flex-col">
-        <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Talk</h3>
+        <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Lets Talk</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex flex-col gap-2 ">
               <label htmlFor="Name" className="font-mono text-white text-3xl md:text-4xl" >Name</label>
@@ -71,7 +71,7 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="Name" className="font-mono text-white text-3xl md:text-4xl" >Your Email Address</label>
+              <label htmlFor="Name" className="font-mono text-white text-xl md:text-4xl" >Your Email</label>
               <input
                 type="email"
                 name="email"
