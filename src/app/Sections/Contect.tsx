@@ -31,7 +31,7 @@ export default function Contact() {
         "service_9xkra5d", 
         "template_y7eaafb", 
         {
-          from_name: Form.name,
+          name: Form.name,
           to_name: "Vipul Suthar",
           from_email: Form.email,
           to_email: "vipulsuthar9351@gmail.com",
