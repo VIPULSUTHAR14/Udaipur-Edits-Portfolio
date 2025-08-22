@@ -5,7 +5,7 @@ export default function Hero(){
     return (
         <div id="Hero" className=" min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8" >
             <div className="flex flex-col w-full max-w-7xl gap-10 sm:gap-12 md:gap-16 justify-center items-center rounded-2xl py-10 sm:py-12 md:py-16" >
-                <p className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl drop-shadow-2xl drop-shadow-gray-400 bg-clip-text text-transparent bg-gradient-to-l from-cyan-700 to-red-700" > Hi, I am Devendra Suthar</p>
+                <p className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl drop-shadow-2xl drop-shadow-gray-400 bg-clip-text text-transparent bg-gradient-to-l from-cyan-700 to-red-700" > Hi, I am Udaipur Editz</p>
                 <p className="font-mono text-base sm:text-lg md:text-xl font-light text-cyan-400 text-center" >I may not have the right words, but my edits will say it all</p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full" >
                     <div className="flex flex-col justify-center items-center gap-6 rounded-2xl ring-1 ring-white p-6 w-full min-h-[240px] " >

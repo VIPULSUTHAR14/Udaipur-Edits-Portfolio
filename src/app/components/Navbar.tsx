@@ -41,7 +41,7 @@ export default function Navbar() {
           onClick={() => handleClick("Hero")}
           className="text-2xl bg-clip-text text-transparent bg-gradient-to-l from-red-700 to-cyan-700 font-semibold tracking-tight font-mono"
         >
-          Devendera
+          Udaipur Editz
         </button>
 
         {/* Desktop nav (large devices) */}
