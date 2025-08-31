@@ -28,16 +28,16 @@ export default function Contact() {
     setLoading(true);
     try {
       await emailjs.send(
-        "service_9xkra5d", 
-        "template_y7eaafb", 
+        "service_b12yqee", 
+        "template_7aigf11", 
         {
           name: Form.name,
-          to_name: "Vipul Suthar",
+          to_name: "Udaipur Editz",
           from_email: Form.email,
-          to_email: "vipulsuthar9351@gmail.com",
+          to_email: "UdaipurEditz@gmail.com",
           message: Form.message,
         },
-        "WmKAI2X-A2t7BdleF" 
+        "m1In5IeKPPu5a1QIx" 
       );
 
       alert("Your Message Has Been Sent");
