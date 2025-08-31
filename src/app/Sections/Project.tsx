@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface Project {
   _id: string;
@@ -85,9 +86,11 @@ export default function Projects() {
             {projectData.map((project) => (
               <div key={project._id} className="bg-gray-900 rounded-2xl p-6 ring-1 ring-white/10 hover:ring-cyan-500/50 transition-all">
                 <div className="mb-4">
-                  <img 
+                  <Image 
                     src={project.imageUrl} 
                     alt={project.title}
+                    width={400}
+                    height={192}
                     className="w-full h-48 object-cover rounded-lg mb-4"
                     onError={(e) => {
                       e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPk5vIEltYWdlPC90ZXh0Pjwvc3ZnPg==';

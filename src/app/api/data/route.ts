@@ -5,7 +5,7 @@ import { MongoClient } from "mongodb";
 const database = process.env.MONGO_DATABASE;
 const collectionName = "PROJECTS";
 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     const client: MongoClient = await clientPromise;
     const db = client.db(database);
@@ -26,7 +26,7 @@ export async function GET(req: Request) {
       { status: 200 }
     );
 
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("Error fetching project data:", err);
     return NextResponse.json(
       { message: "An Internal Server Error Occurred." },

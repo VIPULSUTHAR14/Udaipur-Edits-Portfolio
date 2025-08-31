@@ -1,4 +1,4 @@
-import { MongoClient, MongoClientOptions } from "mongodb";
+import { MongoClient } from "mongodb";
 
 const mongoDB_URI= process.env.MONGOURI;
 const uri = process.env.MONGOURI;
@@ -15,14 +15,14 @@ if (!mongoDB_URI) {
   if (process.env.NODE_ENV === 'development') {
     // In development mode, use a global variable so that the value
     // is preserved across module reloads caused by HMR (Hot Module Replacement).
-    if (!(global as any )._mongoClientPromise) {
-      client = new MongoClient(uri as any, options);
-      (global as any )._mongoClientPromise = client.connect();
+    if (!(global as typeof globalThis & { _mongoClientPromise?: Promise<MongoClient> })._mongoClientPromise) {
+      client = new MongoClient(uri as string, options);
+      (global as typeof globalThis & { _mongoClientPromise?: Promise<MongoClient> })._mongoClientPromise = client.connect();
     }
-    clientPromise = (global as any)._mongoClientPromise;
+    clientPromise = (global as typeof globalThis & { _mongoClientPromise?: Promise<MongoClient> })._mongoClientPromise!;
   } else {
     // In production mode, it's best to not use a global variable.
-    client = new MongoClient(uri as any , options);
+    client = new MongoClient(uri as string, options);
     clientPromise = client.connect();
   }
 
