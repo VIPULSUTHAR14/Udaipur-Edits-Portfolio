@@ -27,7 +27,7 @@ export default function Footer() {
           aria-label="Copy email address"
         >
           <Mail className="text-cyan-400 group-hover:text-cyan-300 w-6 h-6" />
-          <span className="xl:text-lg md:text-xl font-mono text-cyan-300 group-hover:text-cyan-200 select-all">
+          <span className="text-sm sm:text-base md:text-xl xl:text-lg font-mono text-cyan-300 group-hover:text-cyan-200 select-all break-all max-w-[90vw] sm:max-w-none">
             DevendraSuthar@gmail.com
           </span>
           {hasCopied ? (
