@@ -1,29 +1,32 @@
 "use client"
-import {GalleryHorizontal, GalleryVertical, TvMinimalPlay} from "lucide-react";
+import Link from "next/link";
+import { GalleryHorizontal, GalleryVertical, TvMinimalPlay } from "lucide-react";
 
-export default function Hero(){
+export default function Hero() {
     return (
-        <div id="Hero" className=" min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8" >
-            <div className="flex flex-col w-full max-w-7xl gap-10 sm:gap-12 md:gap-16 justify-center items-center rounded-2xl py-10 sm:py-12 md:py-16" >
-                <p className="font-mono font-bold text-3xl sm:text-4xl md:text-5xl drop-shadow-2xl drop-shadow-gray-400 bg-clip-text text-transparent bg-gradient-to-l from-cyan-700 to-red-700" >Udaipur Editz</p>
-                <p className="font-mono text-base sm:text-lg md:text-xl font-light text-cyan-400 text-center" >I may not have the right words, but my edits will say it all</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10 w-full" >
-                    <div className="flex flex-col justify-center items-center gap-6 rounded-2xl ring-1 ring-white p-6 w-full min-h-[240px] " >
-                        <TvMinimalPlay className="text-red-700 size-10 md:size-12 md:hover:size-14 hover:size-12 transition-all"/>
-                        <p className="font-mono text-lg md:text-xl text-center text-transparent bg-clip-text bg-gradient-to-l from-red-700 via-white to-red-700 hover:animate-pulse " >Youtube Videos</p>
-                        <p className="font-mono text-sm font-light text-center px-2 sm:px-4">High-quality post-production services designed for YouTube creators & storytellers</p>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-6 rounded-2xl ring-1 ring-white p-6 w-full min-h-[240px]" >
-                        <GalleryHorizontal className="text-pink-400 size-10 md:size-12 md:hover:size-14 hover:size-12 transition-all"/>
-                        <p className="font-mono text-lg md:text-xl text-center text-transparent bg-clip-text bg-gradient-to-l from-pink-500 via-orange-300 to-pink-700 hover:animate-pulse" >Instagram Reels</p>
-                        <p className="font-mono text-sm font-light text-center px-2 sm:px-4">Short-form content editor | High-quality Reels & trendy edits for IG</p>
-                    </div>
-                    <div className="flex flex-col justify-center items-center gap-6 rounded-2xl ring-1 ring-white p-6 w-full min-h-[240px]" >
-                        <GalleryVertical className="size-10 md:size-12 text-red-400 md:hover:size-14 hover:size-12 transition-all" />
-                        <p className="font-mono text-lg md:text-xl text-center text-transparent bg-clip-text bg-gradient-to-l from-red-700 via-white to-red-700 hover:animate-pulse " >YouTube Shorts</p>
-                        <p className="font-mono text-sm font-light text-center px-2 sm:px-4">Transforming raw clips into viral-worthy YouTube Shorts</p>
-                    </div>
+        <div id="Hero" className="relative min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 border-b-2 border-gray-400/10 bg-[url('/dev1.jpg')] bg-cover bg-center bg-no-repeat backdrop-blur-3xl" >
+            {/* Dark overlay for text readability */}
+            <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+            <div className="relative z-10 flex flex-col w-full max-w-7xl gap-8 sm:gap-12 md:gap-16 justify-center items-center rounded-2xl py-12 sm:py-16" >
+                <div className="flex  sm:flex-row gap-6 sm:gap-12 md:gap-20 items-center justify-center" >
+                    <img src="/NorexLogo.jpg" alt="Norex Logo" className="size-32 sm:size-44 md:size-56 rounded-full border-2 border-white/20 shadow-lg drop-shadow-xl drop-shadow-amber-300" />
+                    <img src="/UdaipurEditz.png" alt="Udaipur Edits Logo" className="size-32 sm:size-44 md:size-56 drop-shadow-xl drop-shadow-amber-300 object-contain" />
                 </div>
+                <div className="flex flex-col justify-center items-center gap-y-4 text-center max-w-3xl" >
+                    <h1 className="text-4xl sm:text-5xl font-bold font-mono text-white tracking-wider" >Norex</h1>
+                    <h1 className="text-amber-400 text-xl sm:text-2xl font-bold font-mono">Powered by UdaipurEditz</h1>
+                    <p className="text-base sm:text-lg md:text-xl text-gray-200 font-light font-mono max-w-2xl mx-auto leading-relaxed px-4">
+                        Elevating narrative through precision-driven cinematic craft. Where every frame finds its purpose.
+                    </p>
+                </div>
+                {/* <div>
+                    <Link href="project">
+                        <button className="bg-white text-black hover:bg-neutral-200 transition-colors font-mono text-xl px-10 py-3 font-semibold rounded-sm cursor-pointer shadow-md" >
+                            EXPLORE OUR WORK
+                        </button>
+                    </Link>
+                </div> */}
             </div>
         </div>
     )

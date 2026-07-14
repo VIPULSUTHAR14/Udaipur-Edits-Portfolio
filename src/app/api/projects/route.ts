@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import { MongoClient } from "mongodb";
 
 const database = process.env.MONGO_DATABASE;
-const collectionName = "PROJECTS";
+const collectionName = "MainProject";
 
 export async function GET() {
   try {
@@ -11,13 +11,13 @@ export async function GET() {
     const db = client.db(database);
     const dataCollection = db.collection(collectionName);
 
-    // Convert cursor to array to get actual data
-    const data = await dataCollection.find({}).toArray();
+    // Fetch projects sorted by date descending (newest first)
+    const data = await dataCollection.find({}).sort({ date: -1 }).toArray();
 
-    if (!data || data.length === 0) {
+    if (!data) {
       return NextResponse.json(
-        { message: "No projects found" },
-        { status: 404 }
+        { projects: [] },
+        { status: 200 }
       );
     }
 
@@ -27,7 +27,7 @@ export async function GET() {
     );
 
   } catch (err: unknown) {
-    console.error("Error fetching project data:", err);
+    console.error("Error fetching projects from MainProject:", err);
     return NextResponse.json(
       { message: "An Internal Server Error Occurred." },
       { status: 500 }
