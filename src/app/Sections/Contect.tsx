@@ -87,7 +87,7 @@ export default function Contact() {
               Get in Touch
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold font-sans text-neutral-900 tracking-tight">
-              Let's create together
+              {"Let's create together"}
             </h3>
             <p className="text-sm font-sans text-neutral-500 max-w-xs leading-relaxed">
               Tell us about your project vision or inquiry, and we will get back to you shortly.

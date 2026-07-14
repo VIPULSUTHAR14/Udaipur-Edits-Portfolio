@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
 import {
     Play,
     X,
@@ -9,7 +8,6 @@ import {
     Calendar,
     Search,
     SlidersHorizontal,
-    ArrowLeft,
     Clock,
     Video,
     ExternalLink

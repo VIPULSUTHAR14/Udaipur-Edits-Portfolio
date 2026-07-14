@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 interface Project {
   _id: string;

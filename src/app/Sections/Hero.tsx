@@ -1,6 +1,4 @@
 "use client"
-import Link from "next/link";
-import { GalleryHorizontal, GalleryVertical, TvMinimalPlay } from "lucide-react";
 
 export default function Hero() {
     return (

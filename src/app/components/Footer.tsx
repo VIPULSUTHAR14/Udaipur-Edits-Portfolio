@@ -152,7 +152,7 @@ export default function Footer() {
               Connect
             </h4>
             <p className="text-sm font-sans text-neutral-600 leading-relaxed mb-1">
-              Have a creative vision or inquiry? Let's collaborate.
+              {"Have a creative vision or inquiry? Let's collaborate."}
             </p>
 
             {/* Copy Email Button container */}
